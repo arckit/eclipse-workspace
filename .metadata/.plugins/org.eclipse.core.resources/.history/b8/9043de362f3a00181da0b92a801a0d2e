@@ -1,0 +1,22 @@
+
+
+
+class Main {                                    
+    static void main(String... args) {          
+        println 'Groovy world!'                 
+    }
+}
+
+
+
+
+//import org.codehaus.groovy.runtime.InvokerHelper
+class Main1 extends Script {
+	def run() {
+		println 'Groovy world again!'
+	}
+	static void main(String[] args) {
+		InvokerHelper.runScript(Main, args)
+	}
+}
+

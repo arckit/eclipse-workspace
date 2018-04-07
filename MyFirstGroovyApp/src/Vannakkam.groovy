@@ -1,0 +1,18 @@
+import org.codehaus.groovy.runtime.InvokerHelper
+class Main extends Script {
+	int fib(int n) {
+		n < 2 ? 1 : fib(n-1) + fib(n-2)
+		//println n;
+	}
+	def run() {
+		println 'Groovy world again!'
+		println "${fib(19)}";
+	}
+	
+	//assert fib(10)==89
+	static void main(String[] args) {
+		InvokerHelper.runScript(Main, args)
+		
+	}
+}
+
